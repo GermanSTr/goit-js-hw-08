@@ -29,7 +29,7 @@ form.addEventListener('submit', submitForm);
 
 function submitForm(event) {
   event.preventDefault();
-  currentValue = {};
+  const currentValue = {};
   new FormData(event.currentTarget).forEach((value, key) => {
     currentValue[key] = value;
     event.currentTarget[key].value = '';
