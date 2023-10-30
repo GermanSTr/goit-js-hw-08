@@ -8,8 +8,8 @@ initForm();
 
 form.addEventListener('input', throttle(infoInput, 500));
 
-function infoInput(evt) {
-  new FormData(evt.currentTarget).forEach((value, key) => {
+function infoInput() {
+  new FormData(form).forEach((value, key) => {
     inputData[key] = value;
   });
   localStorage.setItem(KEY_LOCAL_FORM, JSON.stringify(inputData));
